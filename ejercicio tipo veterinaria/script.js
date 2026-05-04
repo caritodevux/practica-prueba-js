@@ -58,7 +58,6 @@ function renderizarLista() {
     pacientes.forEach(function(mascota) {
         //Crear <li> 
         const li = document.createElement("li");
-        li.textContent = mascota.texto + " ";
         // Formateo del texto informativo
         li.textContent = mascota.nombre + ", " + mascota.especie + ", " + mascota.edad + " años";
         //Crear el botón "Eliminar"
@@ -81,9 +80,9 @@ function eliminarMascota(id) {
     })
     // - Llamar a renderizarLista() para actualizar
     const visorFeedback = document.getElementById("mensaje-feedback");
-    visorFeedback.textContent = "Se ha eliminado " + mascota.id;
+    visorFeedback.textContent = "Se ha eliminado" + id;
     visorFeedback.style.color = "blue";
-    console.log("Se elimino " + mascota.id);
+    console.log("Se elimino " + id);
     renderizarLista();
 };
 
